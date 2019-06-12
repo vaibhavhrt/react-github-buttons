@@ -1,7 +1,7 @@
 {
   "name": "react-github-buttons",
   "version": "1.0.0",
-  "description": "React Components for dynamic buttons for github repo&#x27;s start, fork etc.",
+  "description": "React Components for dynamic buttons for github repo&#x27;s star, fork etc.",
   "author": "vaibhavhrt",
   "license": "MIT",
   "repository": "vaibhavhrt/react-github-buttons",
