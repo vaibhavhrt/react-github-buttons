@@ -3,7 +3,7 @@
  */
 import * as React from "react";
 
-export default function Star(){
+export default function Star() {
   return (
     <div>
       Github Star
