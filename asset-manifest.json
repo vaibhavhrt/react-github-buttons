@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-github-buttons/static/css/main.7a59bd4a.chunk.css",
+    "main.js": "/react-github-buttons/static/js/main.8a6f8c78.chunk.js",
+    "main.js.map": "/react-github-buttons/static/js/main.8a6f8c78.chunk.js.map",
+    "runtime~main.js": "/react-github-buttons/static/js/runtime~main.6fb64d52.js",
+    "runtime~main.js.map": "/react-github-buttons/static/js/runtime~main.6fb64d52.js.map",
+    "static/js/2.e5f6197d.chunk.js": "/react-github-buttons/static/js/2.e5f6197d.chunk.js",
+    "static/js/2.e5f6197d.chunk.js.map": "/react-github-buttons/static/js/2.e5f6197d.chunk.js.map",
+    "index.html": "/react-github-buttons/index.html",
+    "precache-manifest.ff29d06ddbfcf58d96656dce0e1fecce.js": "/react-github-buttons/precache-manifest.ff29d06ddbfcf58d96656dce0e1fecce.js",
+    "service-worker.js": "/react-github-buttons/service-worker.js",
+    "static/css/main.7a59bd4a.chunk.css.map": "/react-github-buttons/static/css/main.7a59bd4a.chunk.css.map"
+  }
+}
