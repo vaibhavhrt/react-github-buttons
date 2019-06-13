@@ -3,6 +3,7 @@
     "tslint:recommended"
   ],
   "rules": {
-    "quotemark": [true, "double", "jsx-double"]
+    "quotemark": [true, "double", "jsx-double"],
+    "member-access": [true, "no-public"]
   }
 }
