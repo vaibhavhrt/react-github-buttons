@@ -1,3 +1,3 @@
-import { Star } from "./star";
+import Star from "./star";
 
 export { Star };
