@@ -4,8 +4,7 @@
 import * as PropTypes from "prop-types";
 import * as React from "react";
 
-import classes from "../styles.css";
-import StarSvg from "./starIcon";
+import GithubButton from "../lib/githubButton";
 
 export interface IPropTypes {
   owner: string;
@@ -37,24 +36,8 @@ export default class Star extends React.Component<IPropTypes, IState> {
   }
 
   render() {
-    const { owner, repo } = this.props;
+    // const { owner, repo } = this.props;
     const { stargazers_count } = this.state;
-    return (
-      <div className={classes.root}>
-        <button title={`Star ${owner}/${repo}`} className={classes.button}>
-          <StarSvg />
-          Star
-        </button>
-        <a
-          className={classes.count}
-          href={`https://github.com/${owner}/${repo}/stargazers`}
-          aria-label={`${stargazers_count} user starred this repository`}
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          {stargazers_count}
-        </a>
-    </div>
-    );
+    return <GithubButton variant="star" count={stargazers_count} { ...this.props } />;
   }
 }
