@@ -6,7 +6,7 @@ export default class App extends Component {
   render () {
     return (
       <div>
-        <Star />
+        <Star repo={'vaibhavhrt/react-github-buttons'} />
       </div>
     )
   }
