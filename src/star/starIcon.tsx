@@ -1,10 +1,10 @@
 import * as React from "react";
-import styles from "../styles.css";
+import classes from "../styles.css";
 
 export default function StarIcon() {
   return (
     <svg
-      className={styles.svgicon}
+      className={classes.svgicon}
       viewBox="0 0 14 16"
       version="1.1"
       width="14"

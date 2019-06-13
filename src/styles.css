@@ -8,6 +8,7 @@
 }
 
 .button {
+  color: inherit;
   font-size: 12px;
   line-height: 20px;
   padding: 3px 10px;

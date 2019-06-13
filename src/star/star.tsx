@@ -2,7 +2,7 @@
  * @function Star
  */
 import * as React from "react";
-import styles from "../styles.css";
+import classes from "../styles.css";
 import StarSvg from "./starIcon";
 
 export interface IPropTypes { repo: string; }
@@ -10,13 +10,13 @@ export interface IPropTypes { repo: string; }
 export default function Star(props: IPropTypes) {
   const { repo } = props;
   return (
-    <div className={styles.root}>
-      <button title={`Star ${repo}`} className={styles.button}>
+    <div className={classes.root}>
+      <button title={`Star ${repo}`} className={classes.button}>
         <StarSvg />
         Star
       </button>
       <a
-        className={styles.count}
+        className={classes.count}
         href={`https://github.com/${repo}/stargazers`}
         aria-label={`${1} user starred this repository`}
         target="_blank"
