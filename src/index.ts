@@ -1,3 +1,4 @@
 import Star from "./star";
+import Fork from "./fork";
 
-export { Star };
+export { Fork, Star };
