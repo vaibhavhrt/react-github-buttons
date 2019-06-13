@@ -6,14 +6,15 @@ import * as React from "react";
 
 import classes from "../styles.css";
 
-import StarIcon from "./icons/starIcon";
 import ForkIcon from "./icons/forkIcon";
+import StarIcon from "./icons/starIcon";
+import WatchIcon from "./icons/watchIcon";
 
 function getDataForVariant(
   variant: string,
   count: number,
   owner: string,
-  repo: string
+  repo: string,
   ): {
     title: string;
     btnTitle: string;
@@ -35,10 +36,16 @@ function getDataForVariant(
     title = "Fork";
     btnTitle = `Fork your own copy of ${owner}/${repo} to your account`;
     label = `${count} users forked this repository`;
-    countUrl = `https://github.com/vaibhavhrt/react-github-buttons/network/members`;
+    countUrl = `https://github.com/${owner}/${repo}/network/members`;
     return { title, btnTitle, label, countUrl, Icon: ForkIcon };
+  } else if (variant === "watch") {
+    title = "Watch";
+    btnTitle = "";
+    label = `${count} users are watching this repository`;
+    countUrl = `https://github.com/${owner}/${repo}/watchers`;
+    return { title, btnTitle, label, countUrl, Icon: WatchIcon };
   }
-  throw new Error("Invalid Variant, supply one of [star, fork]");
+  throw new Error("Invalid Variant, supply one of [star, fork, watch]");
 }
 
 export interface IPropTypes {
@@ -56,7 +63,7 @@ export default function GithubButton(props: IPropTypes) {
     <div className={classes.root}>
       <button title={btnTitle} className={classes.button}>
         <Icon />
-        {title}
+        {` ${title}`}
       </button>
       <a
         className={classes.count}
@@ -75,5 +82,5 @@ GithubButton.propTypes = {
   count: PropTypes.node.isRequired,
   owner: PropTypes.string.isRequired,
   repo: PropTypes.string.isRequired,
-  variant: PropTypes.oneOf(["star", "fork"]),
+  variant: PropTypes.oneOf(["star", "fork", "watch"]),
 };

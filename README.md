@@ -1,12 +1,12 @@
 # react-github-buttons
 
-> React Components for dynamic buttons for github repo&#x27;s start, fork etc.
+> React Components for dynamic buttons for github repo's start, fork etc.
 
 [![NPM](https://img.shields.io/npm/v/react-github-buttons.svg)](https://www.npmjs.com/package/react-github-buttons) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Features
 
-Fork, GitHub's Star, Fork, Watch etc.(See full list below) buttons with realtime numbers of star, fork etc. as React Components.
+Provies GitHub's Star, Fork, Watch etc.(See full list below) buttons with realtime numbers of star, fork etc. as React Components.
 
 ## Install
 
