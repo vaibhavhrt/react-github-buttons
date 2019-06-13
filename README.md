@@ -19,13 +19,14 @@ npm install --save react-github-buttons
 ```tsx
 import React from 'react';
 
-import { Fork, Star } from 'react-github-buttons';
+import { Fork, Star, Watch } from 'react-github-buttons';
 
 function App() {
   return (
     <div>
       <Star owner='facebook' repo='react' />
       <Fork owner='facebook' repo='react' />
+      <Watch owner='facebook' repo='react' />
     </div>
   )
 }
@@ -33,13 +34,14 @@ function App() {
 
 ## Release Notes
 
-### 0.1.0
+### 0.2.0
+#### Added
 
-- Add Star and Fork button.
+- Watch Button
 
 ## Issues
 
-Issues, bugs and feature request at https://github.com/vaibhavhrt/react-github-buttons/issues
+Issues, bugs and feature request at [github issues page](https://github.com/vaibhavhrt/react-github-buttons/issues)
 
 -----------------------------------------------------------------------------------------------------------
 

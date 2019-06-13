@@ -1,7 +1,7 @@
 {
   "name": "react-github-buttons-example",
   "homepage": "https://vaibhavhrt.github.io/react-github-buttons",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "private": true,
   "dependencies": {

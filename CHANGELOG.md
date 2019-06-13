@@ -3,6 +3,8 @@
 All notable changes to the "react-github-buttons" project will be documented in this file.
 
 ## [Unreleased]
+
+## [0.2.0] 2019-6-13
 ### Added
 
 - Watch Button

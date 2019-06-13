@@ -1,6 +1,6 @@
 {
   "name": "react-github-buttons",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "React Components for dynamic buttons for github repo's star, fork etc.",
   "author": "vaibhavhrt",
   "license": "MIT",
@@ -18,7 +18,7 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "npm run build",
-    "predeploy": "cd example && npm install && npm run build",
+    "predeploy": "cd example && npm run build",
     "deploy": "gh-pages -d example/build",
     "lint": "tslint **/src/**.{ts,tsx} --exclude **/node_modules/**"
   },
