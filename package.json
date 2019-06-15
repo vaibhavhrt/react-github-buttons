@@ -2,9 +2,19 @@
   "name": "react-github-buttons",
   "version": "0.2.0",
   "description": "React Components for dynamic buttons for github repo's star, fork etc.",
-  "author": "vaibhavhrt",
+  "keywords": ["react", "github", "component", "utility"],
+  "author": {
+    "email": "vaibhav.hrt@gmail.com",
+    "name": "Vaibhav Vishal",
+    "url": "https://github.com/vaibhavhrt"
+  },
   "license": "MIT",
-  "repository": "vaibhavhrt/react-github-buttons",
+  "repository": "https://github.com/vaibhavhrt/react-github-buttons",
+  "bugs": {
+    "url": "https://github.com/vaibhavhrt/react-github-buttons/issues",
+    "email": "vaibhav.hrt@gmail.com"
+  },
+  "homepage": "https://vaibhavhrt.github.io/react-github-buttons/",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -18,15 +28,15 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "npm run build",
-    "predeploy": "cd example && npm run build",
+    "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build",
     "lint": "tslint **/src/**.{ts,tsx} --exclude **/node_modules/**"
   },
   "dependencies": {},
   "peerDependencies": {
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
     "@svgr/rollup": "^4.3.0",
