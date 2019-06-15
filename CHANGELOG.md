@@ -4,6 +4,11 @@ All notable changes to the "react-github-buttons" project will be documented in 
 
 ## [Unreleased]
 
+## [0.4.0] 2019-6-15
+### Added
+
+- Sponsor button
+
 ## [0.3.0] 2019-6-15
 ### Added
 
