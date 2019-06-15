@@ -36,7 +36,6 @@ export default class Star extends React.Component<IPropTypes, IState> {
   }
 
   render() {
-    // const { owner, repo } = this.props;
     const { stargazers_count } = this.state;
     return <GithubButton variant="star" count={stargazers_count} { ...this.props } />;
   }
