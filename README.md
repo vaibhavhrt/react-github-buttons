@@ -2,7 +2,9 @@
 
 > React Components for dynamic buttons for github repo's start, fork etc.
 
-[![NPM](https://img.shields.io/npm/v/react-github-buttons.svg)](https://www.npmjs.com/package/react-github-buttons) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-github-buttons.svg)](https://www.npmjs.com/package/react-github-buttons)
+[![Build Status](https://travis-ci.com/vaibhavhrt/react-github-buttons.svg?branch=master)](https://travis-ci.com/vaibhavhrt/react-github-buttons)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Features
 
