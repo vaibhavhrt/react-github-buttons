@@ -7,9 +7,9 @@ import * as React from "react";
 import GithubButton from "./lib/githubButton";
 
 export interface IPropTypes {
+  count: number;
   owner: string;
   repo: string;
-  count: number;
 }
 
 export default function UsedBy(props: IPropTypes) {
@@ -17,7 +17,7 @@ export default function UsedBy(props: IPropTypes) {
 }
 
 UsedBy.propTypes = {
+  count: PropTypes.number.isRequired,
   owner: PropTypes.string.isRequired,
   repo: PropTypes.string.isRequired,
-  count: PropTypes.number.isRequired,
 };

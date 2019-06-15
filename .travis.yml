@@ -9,5 +9,5 @@ install:
   - yarn install
   - yarn add react prop-types
 script:
-  # - npm run lint
+  - yarn run lint
   - yarn test
