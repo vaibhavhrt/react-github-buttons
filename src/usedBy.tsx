@@ -9,6 +9,7 @@ import GithubButton from "./lib/githubButton";
 export interface IPropTypes {
   owner: string;
   repo: string;
+  count: number;
 }
 
 export default function UsedBy(props: IPropTypes) {
