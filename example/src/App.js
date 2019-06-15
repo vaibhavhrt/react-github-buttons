@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Fork, Star, Watch } from 'react-github-buttons';
+import { Fork, Star, Watch, UsedBy } from 'react-github-buttons';
 
 export default class App extends Component {
   render () {
@@ -9,6 +9,7 @@ export default class App extends Component {
         <Star owner='vaibhavhrt' repo='react-github-buttons' />
         <Fork owner='vaibhavhrt' repo='react-github-buttons' />
         <Watch owner='vaibhavhrt' repo='react-github-buttons' />
+        <UsedBy owner='vaibhavhrt' repo='react-github-buttons' count={0} />
       </div>
     )
   }

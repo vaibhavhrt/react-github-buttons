@@ -19,7 +19,7 @@ npm install --save react-github-buttons
 ```tsx
 import React from 'react';
 
-import { Fork, Star, Watch } from 'react-github-buttons';
+import { Fork, Star, UsedBy, Watch } from 'react-github-buttons';
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
       <Star owner='facebook' repo='react' />
       <Fork owner='facebook' repo='react' />
       <Watch owner='facebook' repo='react' />
+      <UsedBy owner='facebook' repo='react' count={2077841} />
     </div>
   )
 }
@@ -34,10 +35,10 @@ function App() {
 
 ## Release Notes
 
-### 0.2.0
+### 0.3.0
 #### Added
 
-- Watch Button
+- Used by button
 
 ## Issues
 

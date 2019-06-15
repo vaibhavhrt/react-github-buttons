@@ -9,6 +9,7 @@ import classes from "../styles.css";
 import ForkIcon from "./icons/forkIcon";
 import StarIcon from "./icons/starIcon";
 import WatchIcon from "./icons/watchIcon";
+import UsedByIcon from './icons/usedByIcon';
 
 function getDataForVariant(
   variant: string,
@@ -44,8 +45,14 @@ function getDataForVariant(
     label = `${count} users are watching this repository`;
     countUrl = `https://github.com/${owner}/${repo}/watchers`;
     return { title, btnTitle, label, countUrl, Icon: WatchIcon };
+  } else if (variant === "usedby") {
+    title = "Used by";
+    btnTitle = "";
+    label = `${count} repositories depend on this package`;
+    countUrl = `https://github.com/${owner}/${repo}/network/dependents`;
+    return { title, btnTitle, label, countUrl, Icon: UsedByIcon };
   }
-  throw new Error("Invalid Variant, supply one of [star, fork, watch]");
+  throw new Error("Invalid Variant, supply one of [star, fork, watch, usedby]");
 }
 
 export interface IPropTypes {
@@ -82,5 +89,5 @@ GithubButton.propTypes = {
   count: PropTypes.node.isRequired,
   owner: PropTypes.string.isRequired,
   repo: PropTypes.string.isRequired,
-  variant: PropTypes.oneOf(["star", "fork", "watch"]),
+  variant: PropTypes.oneOf(["star", "fork", "watch", "usedby"]),
 };

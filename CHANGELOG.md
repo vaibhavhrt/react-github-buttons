@@ -4,6 +4,11 @@ All notable changes to the "react-github-buttons" project will be documented in 
 
 ## [Unreleased]
 
+## [0.3.0] 2019-6-15
+### Added
+
+- Used by button
+
 ## [0.2.0] 2019-6-13
 ### Added
 
