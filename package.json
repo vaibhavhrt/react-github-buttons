@@ -1,6 +1,6 @@
 {
   "name": "react-github-buttons",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "React Components for dynamic buttons for github repo's star, fork etc.",
   "keywords": ["react", "github", "component", "utility"],
   "author": {

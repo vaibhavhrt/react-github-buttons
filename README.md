@@ -35,10 +35,10 @@ function App() {
 
 ## Release Notes
 
-### 0.3.0
-#### Added
+## 0.4.0
+### Added
 
-- Used by button
+- Sponsor button
 
 ## Issues
 

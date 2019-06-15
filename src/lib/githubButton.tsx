@@ -10,6 +10,7 @@ import ForkIcon from "./icons/forkIcon";
 import StarIcon from "./icons/starIcon";
 import WatchIcon from "./icons/watchIcon";
 import UsedByIcon from './icons/usedByIcon';
+import SponsorIcon from './icons/sponsorIcon';
 
 function getDataForVariant(
   variant: string,
@@ -51,8 +52,14 @@ function getDataForVariant(
     label = `${count} repositories depend on this package`;
     countUrl = `https://github.com/${owner}/${repo}/network/dependents`;
     return { title, btnTitle, label, countUrl, Icon: UsedByIcon };
+  } else if (variant === "sponsor") {
+    title = "Sponsor";
+    btnTitle = `Sponsor ${owner}/${repo}`;
+    label = "";
+    countUrl = "";
+    return { title, btnTitle, label, countUrl, Icon: SponsorIcon };
   }
-  throw new Error("Invalid Variant, supply one of [star, fork, watch, usedby]");
+  throw new Error("Invalid Variant, supply one of [star, fork, watch, usedby, sponsor]");
 }
 
 export interface IPropTypes {
@@ -60,19 +67,22 @@ export interface IPropTypes {
   repo: string;
   variant: string;
   count: number;
+  showCount: boolean;
 }
 
 export default function GithubButton(props: IPropTypes) {
-  const { owner, repo, variant, count } = props;
+  const { owner, repo, variant, count, showCount } = props;
   const { title, btnTitle, label, countUrl, Icon } = getDataForVariant(variant, count, owner, repo);
+
+  const inlineStyle = showCount ? {} : { borderRadius: ".25em" };
 
   return (
     <div className={classes.root}>
-      <button title={btnTitle} className={classes.button}>
+      <button title={btnTitle} className={classes.button} style={inlineStyle}>
         <Icon />
         {` ${title}`}
       </button>
-      <a
+      {showCount && <a
         className={classes.count}
         href={countUrl}
         aria-label={label}
@@ -80,14 +90,20 @@ export default function GithubButton(props: IPropTypes) {
         rel="noreferrer noopener"
       >
         {count}
-      </a>
+      </a>}
   </div>
   );
 }
 
 GithubButton.propTypes = {
-  count: PropTypes.node.isRequired,
+  count: PropTypes.number,
   owner: PropTypes.string.isRequired,
   repo: PropTypes.string.isRequired,
-  variant: PropTypes.oneOf(["star", "fork", "watch", "usedby"]),
+  variant: PropTypes.oneOf(["star", "fork", "watch", "usedby", "sponsor"]),
+  showCount: PropTypes.bool,
+};
+
+GithubButton.defaultProps = {
+  count: 0,
+  showCount: true,
 };
