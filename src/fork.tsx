@@ -1,10 +1,10 @@
 /**
  * @function Fork
  */
-import * as PropTypes from "prop-types";
-import * as React from "react";
+import * as PropTypes from 'prop-types';
+import * as React from 'react';
 
-import GithubButton from "./lib/githubButton";
+import GithubButton from './lib/githubButton';
 
 export interface IPropTypes {
   owner: string;
@@ -30,14 +30,16 @@ export default class Fork extends React.Component<IPropTypes, IState> {
 
   componentDidMount() {
     const { owner, repo } = this.props;
-    fetch(`https://api.github.com/repos/${owner}/${repo}`).then((res) => res.json()).then((res) => {
-      this.setState({ forks_count: res.forks_count });
-    });
+    fetch(`https://api.github.com/repos/${owner}/${repo}`)
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({ forks_count: res.forks_count });
+      });
   }
 
   render() {
     // const { owner, repo } = this.props;
     const { forks_count } = this.state;
-    return <GithubButton variant="fork" count={forks_count} { ...this.props } />;
+    return <GithubButton variant="fork" count={forks_count} {...this.props} />;
   }
 }

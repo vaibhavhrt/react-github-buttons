@@ -1,10 +1,10 @@
 /**
  * @function Sponsor
  */
-import * as PropTypes from "prop-types";
-import * as React from "react";
+import * as PropTypes from 'prop-types';
+import * as React from 'react';
 
-import GithubButton from "./lib/githubButton";
+import GithubButton from './lib/githubButton';
 
 export interface IPropTypes {
   owner: string;
@@ -12,7 +12,7 @@ export interface IPropTypes {
 }
 
 export default function Sponsor(props: IPropTypes) {
-  return <GithubButton variant="sponsor" showCount={false} { ...props } />;
+  return <GithubButton variant="sponsor" showCount={false} {...props} />;
 }
 
 Sponsor.propTypes = {

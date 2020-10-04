@@ -1,10 +1,10 @@
 /**
  * @function UsedBy
  */
-import * as PropTypes from "prop-types";
-import * as React from "react";
+import * as PropTypes from 'prop-types';
+import * as React from 'react';
 
-import GithubButton from "./lib/githubButton";
+import GithubButton from './lib/githubButton';
 
 export interface IPropTypes {
   count: number;
@@ -13,7 +13,7 @@ export interface IPropTypes {
 }
 
 export default function UsedBy(props: IPropTypes) {
-  return <GithubButton variant="usedby" { ...props } />;
+  return <GithubButton variant="usedby" {...props} />;
 }
 
 UsedBy.propTypes = {

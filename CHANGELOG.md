@@ -7,6 +7,7 @@ All notable changes to the "react-github-buttons" project will be documented in 
 - Update Dependencies
 - Drop node 8
 - remove tslint
+- switch to eslint & prettier
 
 ## [0.4.0] 2019-6-15
 ### Added
