@@ -3,6 +3,9 @@
 All notable changes to the "react-github-buttons" project will be documented in this file.
 
 ## [Unreleased]
+- Switch to yarn
+- Update Dependencies
+- Drop node 8
 
 ## [0.4.0] 2019-6-15
 ### Added
