@@ -1,15 +1,22 @@
 {
   "files": {
     "main.css": "/react-github-buttons/static/css/main.7a59bd4a.chunk.css",
-    "main.js": "/react-github-buttons/static/js/main.e6606381.chunk.js",
-    "main.js.map": "/react-github-buttons/static/js/main.e6606381.chunk.js.map",
-    "runtime~main.js": "/react-github-buttons/static/js/runtime~main.6fb64d52.js",
-    "runtime~main.js.map": "/react-github-buttons/static/js/runtime~main.6fb64d52.js.map",
-    "static/js/2.69ec7f7e.chunk.js": "/react-github-buttons/static/js/2.69ec7f7e.chunk.js",
-    "static/js/2.69ec7f7e.chunk.js.map": "/react-github-buttons/static/js/2.69ec7f7e.chunk.js.map",
+    "main.js": "/react-github-buttons/static/js/main.b8d3450a.chunk.js",
+    "main.js.map": "/react-github-buttons/static/js/main.b8d3450a.chunk.js.map",
+    "runtime-main.js": "/react-github-buttons/static/js/runtime-main.d4221f7d.js",
+    "runtime-main.js.map": "/react-github-buttons/static/js/runtime-main.d4221f7d.js.map",
+    "static/js/2.5ef8ffbc.chunk.js": "/react-github-buttons/static/js/2.5ef8ffbc.chunk.js",
+    "static/js/2.5ef8ffbc.chunk.js.map": "/react-github-buttons/static/js/2.5ef8ffbc.chunk.js.map",
     "index.html": "/react-github-buttons/index.html",
-    "precache-manifest.c15193373dde3330c8286c9cdd9fee0d.js": "/react-github-buttons/precache-manifest.c15193373dde3330c8286c9cdd9fee0d.js",
+    "precache-manifest.7850d12675ed5c4133518a9448ce442c.js": "/react-github-buttons/precache-manifest.7850d12675ed5c4133518a9448ce442c.js",
     "service-worker.js": "/react-github-buttons/service-worker.js",
-    "static/css/main.7a59bd4a.chunk.css.map": "/react-github-buttons/static/css/main.7a59bd4a.chunk.css.map"
-  }
+    "static/css/main.7a59bd4a.chunk.css.map": "/react-github-buttons/static/css/main.7a59bd4a.chunk.css.map",
+    "static/js/2.5ef8ffbc.chunk.js.LICENSE.txt": "/react-github-buttons/static/js/2.5ef8ffbc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d4221f7d.js",
+    "static/js/2.5ef8ffbc.chunk.js",
+    "static/css/main.7a59bd4a.chunk.css",
+    "static/js/main.b8d3450a.chunk.js"
+  ]
 }
