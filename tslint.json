@@ -1,9 +1,0 @@
-{
-  "extends": [
-    "tslint:recommended"
-  ],
-  "rules": {
-    "quotemark": [true, "double", "jsx-double"],
-    "member-access": [true, "no-public"]
-  }
-}

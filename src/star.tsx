@@ -1,10 +1,10 @@
 /**
  * @function Star
  */
-import * as PropTypes from "prop-types";
-import * as React from "react";
+import * as PropTypes from 'prop-types';
+import * as React from 'react';
 
-import GithubButton from "./lib/githubButton";
+import GithubButton from './lib/githubButton';
 
 export interface IPropTypes {
   owner: string;
@@ -37,6 +37,6 @@ export default class Star extends React.Component<IPropTypes, IState> {
 
   render() {
     const { stargazers_count } = this.state;
-    return <GithubButton variant="star" count={stargazers_count} { ...this.props } />;
+    return <GithubButton variant="star" count={stargazers_count} {...this.props} />;
   }
 }

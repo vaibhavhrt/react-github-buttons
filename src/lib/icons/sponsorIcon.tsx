@@ -1,5 +1,5 @@
-import * as React from "react";
-import classes from "../../styles.css";
+import * as React from 'react';
+import classes from '../../styles.css';
 
 export default function SponsorIcon() {
   return (
@@ -9,7 +9,7 @@ export default function SponsorIcon() {
       version="1.1"
       width="12"
       height="16"
-      style={{ fill: "#ea4aaa" }}
+      style={{ fill: '#ea4aaa' }}
     >
       <path
         fillRule="evenodd"

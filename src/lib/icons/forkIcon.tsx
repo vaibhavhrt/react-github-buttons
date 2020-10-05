@@ -1,5 +1,5 @@
-import * as React from "react";
-import classes from "../../styles.css";
+import * as React from 'react';
+import classes from '../../styles.css';
 
 export default function ForkIcon() {
   return (
