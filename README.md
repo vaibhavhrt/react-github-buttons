@@ -35,13 +35,6 @@ function App() {
 }
 ```
 
-## Release Notes
-
-## 0.4.0
-### Added
-
-- Sponsor button
-
 ## Issues
 
 Issues, bugs and feature request at [github issues page](https://github.com/vaibhavhrt/react-github-buttons/issues)
