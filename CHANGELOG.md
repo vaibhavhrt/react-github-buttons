@@ -3,6 +3,7 @@
 All notable changes to the "react-github-buttons" project will be documented in this file.
 
 ## [Unreleased]
+- Open GitHub repo on button click
 
 ## [0.5.0] 2020-10-05
 ### Changed
