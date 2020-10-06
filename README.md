@@ -4,7 +4,6 @@
 
 [![NPM](https://img.shields.io/npm/v/react-github-buttons.svg)](https://www.npmjs.com/package/react-github-buttons)
 [![Build Status](https://travis-ci.com/vaibhavhrt/react-github-buttons.svg?branch=master)](https://travis-ci.com/vaibhavhrt/react-github-buttons)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Features
 
@@ -13,7 +12,11 @@ Provies GitHub's Star, Fork, Watch etc.(See full list below) buttons with realti
 ## Install
 
 ```bash
-npm install --save react-github-buttons
+yarn add react-github-buttons
+```
+or
+```bash
+npm i react-github-buttons
 ```
 
 ## Usage

@@ -17,13 +17,13 @@ function getDataForVariant(
   count: number,
   owner: string,
   repo: string,
-  ): {
-    title: string;
-    btnTitle: string;
-    label: string;
-    countUrl: string;
-    Icon: () => JSX.Element;
-  } {
+): {
+  title: string;
+  btnTitle: string;
+  label: string;
+  countUrl: string;
+  Icon: () => JSX.Element;
+} {
   let title: string;
   let btnTitle: string;
   let label: string;
@@ -59,7 +59,9 @@ function getDataForVariant(
     countUrl = '';
     return { title, btnTitle, label, countUrl, Icon: SponsorIcon };
   }
-  throw new Error('Invalid Variant, supply one of [star, fork, watch, usedby, sponsor]');
+  throw new Error(
+    'Invalid Variant, supply one of [star, fork, watch, usedby, sponsor]',
+  );
 }
 
 export interface IPropTypes {
@@ -72,26 +74,40 @@ export interface IPropTypes {
 
 export default function GithubButton(props: IPropTypes) {
   const { owner, repo, variant, count, showCount } = props;
-  const { title, btnTitle, label, countUrl, Icon } = getDataForVariant(variant, count, owner, repo);
+  const { title, btnTitle, label, countUrl, Icon } = getDataForVariant(
+    variant,
+    count,
+    owner,
+    repo,
+  );
 
-  const inlineStyle = showCount ? {} : { borderRadius: '.25em' };
+  const inlineStyle = showCount ? undefined : { borderRadius: '.25em' };
 
   return (
     <div className={classes.root}>
-      <button title={btnTitle} className={classes.button} style={inlineStyle}>
-        <Icon />
-        {` ${title}`}
-      </button>
-      {showCount && <a
-        className={classes.count}
-        href={countUrl}
-        aria-label={label}
+      <a
+        title={btnTitle}
+        className={classes.button}
+        style={inlineStyle}
+        href={`https://github.com/${owner}/${repo}`}
         target="_blank"
         rel="noreferrer noopener"
       >
-        {count}
-      </a>}
-  </div>
+        <Icon />
+        {` ${title}`}
+      </a>
+      {showCount && (
+        <a
+          className={classes.count}
+          href={countUrl}
+          aria-label={label}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          {count}
+        </a>
+      )}
+    </div>
   );
 }
 
