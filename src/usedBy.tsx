@@ -1,7 +1,6 @@
 /**
  * @function UsedBy
  */
-import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
 import GithubButton from './lib/githubButton';
@@ -10,14 +9,13 @@ export interface IPropTypes {
   count: number;
   owner: string;
   repo: string;
+  color?: string;
 }
 
-export default function UsedBy(props: IPropTypes) {
-  return <GithubButton variant="usedby" {...props} />;
-}
+const UsedBy: React.FC<IPropTypes> = (props) => {
+  const { color = '#6a737d' } = props;
 
-UsedBy.propTypes = {
-  count: PropTypes.number.isRequired,
-  owner: PropTypes.string.isRequired,
-  repo: PropTypes.string.isRequired,
+  return <GithubButton variant="usedby" color={color} {...props} />;
 };
+
+export default React.memo(UsedBy);
