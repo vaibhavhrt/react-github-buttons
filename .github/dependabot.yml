@@ -4,5 +4,9 @@ updates:
   directory: "/"
   schedule:
     interval: weekly
-    time: "23:30"
   open-pull-requests-limit: 10
+
+- package-ecosystem: npm
+  directory: "/example"
+  schedule:
+    interval: weekly
