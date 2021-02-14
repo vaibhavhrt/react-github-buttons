@@ -1,7 +1,6 @@
 /**
  * @function Fork
  */
-import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
 import GithubButton from './lib/githubButton';
@@ -9,6 +8,7 @@ import GithubButton from './lib/githubButton';
 export interface IPropTypes {
   owner: string;
   repo: string;
+  color?: string;
 }
 
 export interface IState {
@@ -16,11 +16,6 @@ export interface IState {
 }
 
 export default class Fork extends React.Component<IPropTypes, IState> {
-  static propTypes = {
-    owner: PropTypes.string.isRequired,
-    repo: PropTypes.string.isRequired,
-  };
-
   constructor(props: IPropTypes) {
     super(props);
     this.state = {
@@ -38,8 +33,16 @@ export default class Fork extends React.Component<IPropTypes, IState> {
   }
 
   render() {
-    // const { owner, repo } = this.props;
+    const { color = '#6a737d' } = this.props;
     const { forks_count } = this.state;
-    return <GithubButton variant="fork" count={forks_count} {...this.props} />;
+
+    return (
+      <GithubButton
+        variant="fork"
+        count={forks_count}
+        color={color}
+        {...this.props}
+      />
+    );
   }
 }

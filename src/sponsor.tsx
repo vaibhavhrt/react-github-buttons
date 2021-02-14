@@ -1,7 +1,6 @@
 /**
  * @function Sponsor
  */
-import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
 import GithubButton from './lib/githubButton';
@@ -9,13 +8,20 @@ import GithubButton from './lib/githubButton';
 export interface IPropTypes {
   owner: string;
   repo: string;
+  color?: string;
 }
 
-export default function Sponsor(props: IPropTypes) {
-  return <GithubButton variant="sponsor" showCount={false} {...props} />;
-}
+const Sponsor: React.FC<IPropTypes> = (props) => {
+  const { color = '#ea4aaa' } = props;
 
-Sponsor.propTypes = {
-  owner: PropTypes.string.isRequired,
-  repo: PropTypes.string.isRequired,
+  return (
+    <GithubButton
+      variant="sponsor"
+      showCount={false}
+      color={color}
+      {...props}
+    />
+  );
 };
+
+export default React.memo(Sponsor);

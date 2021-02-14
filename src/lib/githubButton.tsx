@@ -1,16 +1,18 @@
 /**
  * @function GithubButton
  */
-import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
 import classes from '../styles.css';
 
-import ForkIcon from './icons/forkIcon';
-import StarIcon from './icons/starIcon';
-import WatchIcon from './icons/watchIcon';
-import UsedByIcon from './icons/usedByIcon';
-import SponsorIcon from './icons/sponsorIcon';
+import {
+  GitForkIcon,
+  StarIcon,
+  EyeIcon,
+  PackageDependentsIcon,
+  HeartIcon,
+  IconProps,
+} from '@primer/octicons-react';
 
 function getDataForVariant(
   variant: string,
@@ -22,7 +24,7 @@ function getDataForVariant(
   btnTitle: string;
   label: string;
   countUrl: string;
-  Icon: () => JSX.Element;
+  Icon: React.FC<IconProps>;
 } {
   let title: string;
   let btnTitle: string;
@@ -39,25 +41,25 @@ function getDataForVariant(
     btnTitle = `Fork your own copy of ${owner}/${repo} to your account`;
     label = `${count} users forked this repository`;
     countUrl = `https://github.com/${owner}/${repo}/network/members`;
-    return { title, btnTitle, label, countUrl, Icon: ForkIcon };
+    return { title, btnTitle, label, countUrl, Icon: GitForkIcon };
   } else if (variant === 'watch') {
     title = 'Watch';
     btnTitle = '';
     label = `${count} users are watching this repository`;
     countUrl = `https://github.com/${owner}/${repo}/watchers`;
-    return { title, btnTitle, label, countUrl, Icon: WatchIcon };
+    return { title, btnTitle, label, countUrl, Icon: EyeIcon };
   } else if (variant === 'usedby') {
     title = 'Used by';
     btnTitle = '';
     label = `${count} repositories depend on this package`;
     countUrl = `https://github.com/${owner}/${repo}/network/dependents`;
-    return { title, btnTitle, label, countUrl, Icon: UsedByIcon };
+    return { title, btnTitle, label, countUrl, Icon: PackageDependentsIcon };
   } else if (variant === 'sponsor') {
     title = 'Sponsor';
     btnTitle = `Sponsor ${owner}/${repo}`;
     label = '';
     countUrl = '';
-    return { title, btnTitle, label, countUrl, Icon: SponsorIcon };
+    return { title, btnTitle, label, countUrl, Icon: HeartIcon };
   }
   throw new Error(
     'Invalid Variant, supply one of [star, fork, watch, usedby, sponsor]',
@@ -68,12 +70,13 @@ export interface IPropTypes {
   owner: string;
   repo: string;
   variant: string;
-  count: number;
-  showCount: boolean;
+  count?: number;
+  showCount?: boolean;
+  color: string;
 }
 
 export default function GithubButton(props: IPropTypes) {
-  const { owner, repo, variant, count, showCount } = props;
+  const { owner, repo, variant, count = 0, showCount = true, color } = props;
   const { title, btnTitle, label, countUrl, Icon } = getDataForVariant(
     variant,
     count,
@@ -93,7 +96,9 @@ export default function GithubButton(props: IPropTypes) {
         target="_blank"
         rel="noreferrer noopener"
       >
-        <Icon />
+        <span style={{ color }}>
+          <Icon />
+        </span>
         {` ${title}`}
       </a>
       {showCount && (
@@ -110,16 +115,3 @@ export default function GithubButton(props: IPropTypes) {
     </div>
   );
 }
-
-GithubButton.propTypes = {
-  count: PropTypes.number,
-  owner: PropTypes.string.isRequired,
-  repo: PropTypes.string.isRequired,
-  variant: PropTypes.oneOf(['star', 'fork', 'watch', 'usedby', 'sponsor']),
-  showCount: PropTypes.bool,
-};
-
-GithubButton.defaultProps = {
-  count: 0,
-  showCount: true,
-};
