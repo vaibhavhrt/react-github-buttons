@@ -1,7 +1,4 @@
-/**
- * @function Star
- */
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import GithubButton from './lib/githubButton';
 
@@ -11,38 +8,27 @@ export interface IPropTypes {
   color?: string;
 }
 
-export interface IState {
-  stargazers_count: number;
-}
+const Star: React.FC<IPropTypes> = (props) => {
+  const { owner, repo, color = '#6a737d' } = props;
+  const [stargazersCount, setStargazersCount] = useState(0);
 
-export default class Star extends React.Component<IPropTypes, IState> {
-  constructor(props: IPropTypes) {
-    super(props);
-    this.state = {
-      stargazers_count: 0,
+  useEffect(() => {
+    const getCount = async () => {
+      const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+      const resJson = await res.json();
+      setStargazersCount(resJson.stargazers_count);
     };
-  }
+    getCount();
+  }, [owner, repo]);
 
-  componentDidMount() {
-    const { owner, repo } = this.props;
-    fetch(`https://api.github.com/repos/${owner}/${repo}`)
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState({ stargazers_count: res.stargazers_count });
-      });
-  }
+  return (
+    <GithubButton
+      color={color}
+      variant="star"
+      count={stargazersCount}
+      {...props}
+    />
+  );
+};
 
-  render() {
-    const { color = '#6a737d' } = this.props;
-    const { stargazers_count } = this.state;
-
-    return (
-      <GithubButton
-        color={color}
-        variant="star"
-        count={stargazers_count}
-        {...this.props}
-      />
-    );
-  }
-}
+export default React.memo(Star);

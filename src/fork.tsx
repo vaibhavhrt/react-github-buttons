@@ -1,48 +1,29 @@
-/**
- * @function Fork
- */
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import GithubButton from './lib/githubButton';
 
-export interface IPropTypes {
+interface IPropTypes {
   owner: string;
   repo: string;
   color?: string;
 }
 
-export interface IState {
-  forks_count: number;
-}
+const Fork: React.FC<IPropTypes> = (props) => {
+  const { owner, repo, color = '#6a737d' } = props;
+  const [forksCount, setForksCount] = useState(0);
 
-export default class Fork extends React.Component<IPropTypes, IState> {
-  constructor(props: IPropTypes) {
-    super(props);
-    this.state = {
-      forks_count: 0,
+  useEffect(() => {
+    const getForkCount = async () => {
+      const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+      const resJson = await res.json();
+      setForksCount(resJson.forks_count);
     };
-  }
+    getForkCount();
+  }, [owner, repo]);
 
-  componentDidMount() {
-    const { owner, repo } = this.props;
-    fetch(`https://api.github.com/repos/${owner}/${repo}`)
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState({ forks_count: res.forks_count });
-      });
-  }
+  return (
+    <GithubButton variant="fork" count={forksCount} color={color} {...props} />
+  );
+};
 
-  render() {
-    const { color = '#6a737d' } = this.props;
-    const { forks_count } = this.state;
-
-    return (
-      <GithubButton
-        variant="fork"
-        count={forks_count}
-        color={color}
-        {...this.props}
-      />
-    );
-  }
-}
+export default React.memo(Fork);

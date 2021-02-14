@@ -4,6 +4,9 @@ All notable changes to the "react-github-buttons" project will be documented in 
 
 ## [Unreleased]
 - Open GitHub repo on button click
+- Update icons
+- Typescript
+- Use Hooks, drop React < 16.8 support
 
 ## [0.5.0] 2020-10-05
 ### Changed
