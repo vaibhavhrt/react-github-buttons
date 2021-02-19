@@ -1,7 +1,4 @@
-/**
- * @function UsedBy
- */
-import * as React from 'react';
+import React from 'react';
 
 import GithubButton from './lib/githubButton';
 

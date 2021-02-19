@@ -1,9 +1,4 @@
-/**
- * @function GithubButton
- */
-import * as React from 'react';
-
-import classes from '../styles.css';
+import React from 'react';
 
 import {
   GitForkIcon,
@@ -13,6 +8,8 @@ import {
   HeartIcon,
   IconProps,
 } from '@primer/octicons-react';
+
+import classes from '../styles.css';
 
 function getDataForVariant(
   variant: string,
@@ -66,7 +63,7 @@ function getDataForVariant(
   );
 }
 
-export interface IPropTypes {
+interface IPropTypes {
   owner: string;
   repo: string;
   variant: string;
@@ -75,7 +72,7 @@ export interface IPropTypes {
   color: string;
 }
 
-export default function GithubButton(props: IPropTypes) {
+const GithubButton: React.FC<IPropTypes> = (props) => {
   const { owner, repo, variant, count = 0, showCount = true, color } = props;
   const { title, btnTitle, label, countUrl, Icon } = getDataForVariant(
     variant,
@@ -114,4 +111,6 @@ export default function GithubButton(props: IPropTypes) {
       )}
     </div>
   );
-}
+};
+
+export default React.memo(GithubButton);
