@@ -45,7 +45,7 @@
     "react-dom": "^16.8.0 || ^17.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-url": "^5.0.1",
+    "@rollup/plugin-url": "^6.0.0",
     "@svgr/rollup": "^5.4.0",
     "@types/jest": "^26.0.14",
     "@types/prop-types": "^15.7.1",
