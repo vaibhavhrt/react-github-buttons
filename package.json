@@ -28,8 +28,8 @@
     "npm": ">=6"
   },
   "scripts": {
-    "test": "cross-env CI=1 react-scripts-ts test --env=jsdom",
-    "test:watch": "react-scripts-ts test --env=jsdom",
+    "test": "cross-env CI=1 react-scripts test --env=jsdom",
+    "test:watch": "react-scripts test --env=jsdom",
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn build",
@@ -38,7 +38,8 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "@primer/octicons-react": "^12.0.0"
+    "@primer/octicons-react": "^12.0.0",
+    "react-scripts": "^4.0.2"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0",
