@@ -1,0 +1,33 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Install & Build Package 📦👷
+        run: yarn install --frozen-lockfile
+
+      - name: Create .env 🔧
+        working-directory: ./example
+        run: echo SKIP_PREFLIGHT_CHECK=true > .env
+
+      - name: Install Example 📦
+        working-directory: ./example
+        run: yarn install --frozen-lockfile
+
+      - name: Build Example 👷
+        working-directory: ./example
+        run: yarn build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with:
+          branch: gh-pages
+          folder: ./example/build
