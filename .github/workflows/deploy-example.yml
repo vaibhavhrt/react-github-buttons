@@ -10,14 +10,18 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
 
-      - name: Install & Build Package
+      - name: Install & Build Package 📦
         run: yarn install --frozen-lockfile
 
-      - name: Install Example
+      - name: Create .env 🔧
+        working-directory: ./example
+        run: echo SKIP_PREFLIGHT_CHECK=true > .env
+
+      - name: Install Example 📦
         working-directory: ./example
         run: yarn install --frozen-lockfile
 
-      - name: Build
+      - name: Build 👷
         working-directory: ./example
         run: yarn build
 
