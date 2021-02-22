@@ -10,7 +10,10 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
 
-      - name: Install
+      - name: Install & Build Package
+        run: yarn install --frozen-lockfile
+
+      - name: Install Example
         working-directory: ./example
         run: yarn install --frozen-lockfile
 
