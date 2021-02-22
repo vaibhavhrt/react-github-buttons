@@ -5,15 +5,15 @@
     "main.js.map": "/react-github-buttons/static/js/main.a05489dc.chunk.js.map",
     "runtime-main.js": "/react-github-buttons/static/js/runtime-main.adef9174.js",
     "runtime-main.js.map": "/react-github-buttons/static/js/runtime-main.adef9174.js.map",
-    "static/js/2.09be6be4.chunk.js": "/react-github-buttons/static/js/2.09be6be4.chunk.js",
-    "static/js/2.09be6be4.chunk.js.map": "/react-github-buttons/static/js/2.09be6be4.chunk.js.map",
+    "static/js/2.67d8a585.chunk.js": "/react-github-buttons/static/js/2.67d8a585.chunk.js",
+    "static/js/2.67d8a585.chunk.js.map": "/react-github-buttons/static/js/2.67d8a585.chunk.js.map",
     "index.html": "/react-github-buttons/index.html",
     "static/css/main.10b2d5cd.chunk.css.map": "/react-github-buttons/static/css/main.10b2d5cd.chunk.css.map",
-    "static/js/2.09be6be4.chunk.js.LICENSE.txt": "/react-github-buttons/static/js/2.09be6be4.chunk.js.LICENSE.txt"
+    "static/js/2.67d8a585.chunk.js.LICENSE.txt": "/react-github-buttons/static/js/2.67d8a585.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.adef9174.js",
-    "static/js/2.09be6be4.chunk.js",
+    "static/js/2.67d8a585.chunk.js",
     "static/css/main.10b2d5cd.chunk.css",
     "static/js/main.a05489dc.chunk.js"
   ]
