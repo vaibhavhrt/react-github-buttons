@@ -1660,10 +1660,10 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
-"@primer/octicons-react@^12.0.0":
-  version "12.0.0"
-  resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-12.0.0.tgz#4b42a361636e4834cb55d241995086e1c1908cd3"
-  integrity sha512-L1u2kjhAEMoOeNOZqQSc4xGE7/Cl6kjhuiIKrJOmNa6M86Zy+/pv1zFlvFnWzxu2FhPTlZWC4LLazTYf5spceA==
+"@primer/octicons-react@^15.1.0":
+  version "15.1.0"
+  resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-15.1.0.tgz#0f68700d1196e0a65b5e782483d5207914cd6e62"
+  integrity sha512-KxKShchstSiZDVZ3aUF9WREdAoV45bzIgAbPcKfrT08+2T4nVQZGYtwDqlHT4/TLpmVIv2Si7hRHBhTWiADe4Q==
 
 "@rollup/plugin-node-resolve@^7.1.1":
   version "7.1.3"
