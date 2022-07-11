@@ -50,7 +50,7 @@
     "@svgr/rollup": "^5.4.0",
     "@types/jest": "^26.0.14",
     "@types/prop-types": "^15.7.1",
-    "@types/react": "^17.0.2",
+    "@types/react": "^18.0.15",
     "@types/react-dom": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@typescript-eslint/parser": "^4.15.1",
